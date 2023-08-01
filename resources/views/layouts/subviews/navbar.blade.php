@@ -37,9 +37,15 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('artists.index') }}"
+                       class="nav-menu {{ Route::currentRouteName() === 'about.index' ? 'active' : '' }}">
+                        Artists
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('songs.index') }}"
                        class="nav-menu {{ Route::currentRouteName() === 'songs.index' ? 'active' : '' }}">
-                        Song Playlist
+                        Songs
                     </a>
                 </li>
                 <li>
@@ -48,6 +54,7 @@
                         About
                     </a>
                 </li>
+                
             </ul>
         </div>
     </div>
