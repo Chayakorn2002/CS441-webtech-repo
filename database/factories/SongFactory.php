@@ -15,11 +15,13 @@ class SongFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    
     public function definition(): array
     {
         return [
             'title' => fake()->realTextBetween(10, 30, 3),
-            'artist_id' => Artist::factory(),
+            // 'artist_id' => Artist::factory(),
+            'artist_id' => Artist::inRandomOrder()->first()->id,
             'duration' => fake()->numberBetween(2 * 60, 6 * 60),
         ];
     }

@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Playlist;
+use App\Models\Song;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -15,12 +17,30 @@ class PlaylistFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    
+    // public function definition(): array
+    // {
+    //     return [
+    //         'name' => fake()->realTextBetween(10, 30, 3),
+    //         'user_id' => User::factory(), 
+    //         'accessibility' => fake()->randomElement(['PUBLIC', 'PRIVATE']),
+    //     ];
+    // }
+
     public function definition(): array
     {
         return [
-            'name' => fake()->realTextBetween(10, 30, 3),
-            'user_id' => User::factory(), 
+            'name' => fake()->sentence(2) . ' Playlist',
+            'user_id' => User::inRandomOrder()->first()->id,
             'accessibility' => fake()->randomElement(['PUBLIC', 'PRIVATE']),
         ];
+    }
+
+    public function configure()
+    {
+        return $this->afterCreating(
+            function (Playlist $playlist) {
+            $playlist->songs()->attach(Song::inRandomOrder()->limit(5)->get(),);
+        });
     }
 }
