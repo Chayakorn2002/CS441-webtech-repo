@@ -4,10 +4,12 @@
     <div class="bg-white shadow-md rounded-md overflow-hidden max-w-lg mx-auto mt-16">
         <div class="bg-pink-100 py-2 px-4">
             <h2 class="text-xl font-semibold text-gray-800">Artist List</h2>
+            @can('create', App\Models\Artist::class)
             <a class="inline-block py-2 px-4 border border-gray-700 bg-pink-100"
-               href="{{ route('artists.create') }}">
+                href="{{ route('artists.create') }}">
                 Create New Artist
             </a>
+            @endcan
         </div>
         
         <ul class="divide-y divide-gray-200">

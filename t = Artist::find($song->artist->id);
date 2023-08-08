@@ -1,0 +1,70 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#7403
+    [34mall[39m: [
+      [34;4mApp\Models\Song[39;24m {#7391
+        [34mid[39m: [35m97[39m,
+        [34mtitle[39m: "[32mAlice went on, half to.[39m",
+        [34martist_id[39m: [35m28[39m,
+        [34mduration[39m: [35m201[39m,
+        [34mcreated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mupdated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mdeleted_at[39m: [36mnull[39m,
+        [34mpivot[39m: [34;4mIlluminate\Database\Eloquent\Relations\Pivot[39;24m {#7392
+          [34mplaylist_id[39m: [35m1[39m,
+          [34msong_id[39m: [35m97[39m,
+        },
+      },
+      [34;4mApp\Models\Song[39;24m {#7390
+        [34mid[39m: [35m86[39m,
+        [34mtitle[39m: "[32mAnd argued each case with my.[39m",
+        [34martist_id[39m: [35m45[39m,
+        [34mduration[39m: [35m337[39m,
+        [34mcreated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mupdated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mdeleted_at[39m: [36mnull[39m,
+        [34mpivot[39m: [34;4mIlluminate\Database\Eloquent\Relations\Pivot[39;24m {#7398
+          [34mplaylist_id[39m: [35m1[39m,
+          [34msong_id[39m: [35m86[39m,
+        },
+      },
+      [34;4mApp\Models\Song[39;24m {#7389
+        [34mid[39m: [35m23[39m,
+        [34mtitle[39m: "[32mAlice,) and round the neck.[39m",
+        [34martist_id[39m: [35m45[39m,
+        [34mduration[39m: [35m163[39m,
+        [34mcreated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mupdated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mdeleted_at[39m: [36mnull[39m,
+        [34mpivot[39m: [34;4mIlluminate\Database\Eloquent\Relations\Pivot[39;24m {#7423
+          [34mplaylist_id[39m: [35m1[39m,
+          [34msong_id[39m: [35m23[39m,
+        },
+      },
+      [34;4mApp\Models\Song[39;24m {#7388
+        [34mid[39m: [35m42[39m,
+        [34mtitle[39m: "[32mFive. 'I heard the Queen say.[39m",
+        [34martist_id[39m: [35m3[39m,
+        [34mduration[39m: [35m244[39m,
+        [34mcreated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mupdated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mdeleted_at[39m: [36mnull[39m,
+        [34mpivot[39m: [34;4mIlluminate\Database\Eloquent\Relations\Pivot[39;24m {#7410
+          [34mplaylist_id[39m: [35m1[39m,
+          [34msong_id[39m: [35m42[39m,
+        },
+      },
+      [34;4mApp\Models\Song[39;24m {#7387
+        [34mid[39m: [35m89[39m,
+        [34mtitle[39m: "[32mWhy, there's hardly room for.[39m",
+        [34martist_id[39m: [35m35[39m,
+        [34mduration[39m: [35m239[39m,
+        [34mcreated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mupdated_at[39m: "[32m2023-08-08 10:16:27[39m",
+        [34mdeleted_at[39m: [36mnull[39m,
+        [34mpivot[39m: [34;4mIlluminate\Database\Eloquent\Relations\Pivot[39;24m {#7417
+          [34mplaylist_id[39m: [35m1[39m,
+          [34msong_id[39m: [35m89[39m,
+        },
+      },
+    ],
+  }
+

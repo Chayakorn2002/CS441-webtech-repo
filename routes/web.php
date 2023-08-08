@@ -4,6 +4,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtistController;
+use App\Models\Playlist;
+use App\Http\Controllers\PlaylistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +46,12 @@ Route::post('/artists/{artist}/songs',
     [ArtistController::class, 'storeSong']
 )->name('artists.songs.store');
 
+Route::resource('/playlists', PlaylistController::class);
+
+Route::middleware(['auth'])->group(function() {
+    Route::resource('/playlists', PlaylistController::class);
+});
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
@@ -54,4 +62,4 @@ Route::post('/artists/{artist}/songs',
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-// require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';

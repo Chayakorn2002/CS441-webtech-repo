@@ -30,7 +30,8 @@ class PlaylistFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->sentence(2) . ' Playlist',
+            'name' => fake()->sentence(2),
+            // 'name' => fake()->sentence(2) . ' Playlist',
             'user_id' => User::inRandomOrder()->first()->id,
             'accessibility' => fake()->randomElement(['PUBLIC', 'PRIVATE']),
         ];

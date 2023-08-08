@@ -6,27 +6,35 @@
     </h1>
 
     <div>
-        <a class="inline-block py-2 px-4 border border-gray-700 bg-pink-100"
+        @can('update', $artist)
+            <a class="inline-block py-2 px-4 border border-gray-700 bg-pink-100"
             href="{{ route('artists.edit', ['artist' => $artist]) }}">
             Edit Artist
         </a>
+        @endcan
+        
+        @can('update', $artist)
         <a class="inline-block py-2 px-4 border border-gray-700 bg-pink-100"
             href="{{ route('artists.songs.create', ['artist' => $artist]) }}">
             Add Song
         </a>
-        @if($artist->songs->isEmpty())
-            <form class="inline-block"
-                action="{{ route('artists.destroy', ['artist' => $artist]) }}"
-                method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit"
-                        class="inline-block py-2 px-4 border border-gray-700 bg-pink-100">
-                    Delete Artist
-                </button>
+        @endcan
+        
+        @can('delete', $artist)
+            @if($artist->songs->isEmpty())
+                <form class="inline-block"
+                    action="{{ route('artists.destroy', ['artist' => $artist]) }}"
+                    method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit"
+                            class="inline-block py-2 px-4 border border-gray-700 bg-pink-100">
+                        Delete Artist
+                    </button>
 
-            </form>
-        @endif
+                </form>
+            @endif
+        @endcan
     </div>
 
     <div class="bg-white shadow-md rounded-md overflow-hidden max-w-lg mx-auto mt-16">
